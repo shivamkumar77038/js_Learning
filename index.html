@@ -12,20 +12,23 @@
     <div class="mainBox">
         <h1>followings are list itmes </h1>
      <ul class="lists">
-        <li>one</li>
-        <li>two</li>
-        <li>three</li>
+        <li id="one">one</li>
+        <li id="two">two</li>
+        <li  id ="three">three</li>
+     </ul>
+     <ul class="lists">
+        <li id="one">one12</li>
+        <li id="two">two123</li>
+        <li  id ="three">three33</li>
      </ul>
     </div>
 </body>
 <script>
-    function language(items){
-       const item = document.createElement('li');
-       item.innerHTML = {items}
-       const ul = document.querySelector('.lists')
-      ul.appendChild(item)
-
-    }
+const ul = document.getElementsByClassName('lists');
+ul[0].addEventListener('click',function(){
+    ul[0].remove();
+    console.log("removed")
+})
     
 
 </script>
